@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけんゲーム RPSLS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>じゃんけんゲーム RPSLS</h1>
+            <button id="rules-btn">ルールを見る</button>
+        </header>
+
+        <section id="choices-area">
+            <h2>選択してください</h2>
+            <div id="choice-buttons">
+                <!-- ボタンはJavaScriptで動的に生成されます -->
+            </div>
+        </section>
+
+        <section id="result-area">
+            <div class="result-container">
+                <div class="player-choice">
+                    <h3>あなたの選択</h3>
+                    <div id="player-choice-display">
+                        <img id="player-image" src="" alt="" style="display: none;">
+                        <p id="player-choice-text">まだ選択されていません</p>
+                    </div>
+                </div>
+
+                <div class="result-message">
+                    <h3 id="result-text">選択してプレイしてください</h3>
+                </div>
+
+                <div class="computer-choice">
+                    <h3>コンピューターの選択</h3>
+                    <div id="computer-choice-display">
+                        <img id="computer-image" src="" alt="" style="display: none;">
+                        <p id="computer-choice-text">待機中...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="error-message" class="error-container" style="display: none;">
+            <p>エラーが発生しました。再度お試しください。</p>
+        </div>
+
+        <div id="rules-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>ゲームのルール</h2>
+                <!-- 画像パスを正しいものに修正 -->
+                <img src="assets/Rock Paper Scissors Lizard Spock image.jpg" alt="ゲームルール図" class="rules-image">
+                <div id="rules-text">
+                    <!-- ルールはAPIから取得して表示します -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
